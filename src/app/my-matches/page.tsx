@@ -181,7 +181,7 @@ function MatchCardView({ card, index }: { card: MatchCard; index: number }) {
       <div className="px-3 py-2">
         <div className="mb-1 flex items-center justify-between">
           <h3 className="text-[18px] font-bold text-[#4f545d]">{card.name}</h3>
-          <span className="text-[12px] text-[#9aa0a8]">⌄</span>
+          <span className="text-[12px] text-[#9aa0a8]"></span>
         </div>
         <div className="text-[12px] text-[#7a8088]">
           <p>{card.summary}</p>
@@ -202,7 +202,7 @@ function MatchCardView({ card, index }: { card: MatchCard; index: number }) {
             card.status === "connect" ? "border-[#3ac0a6] text-[#3ac0a6]" : "border-[#ef6f7d] text-[#ef6f7d]"
           }`}
         >
-          {card.status === "connect" ? "✓" : "♡"}
+          {card.status === "connect" ? "" : ""}
         </div>
         <p className="mt-1 text-[11px] text-[#8c9199]">{card.status === "connect" ? "Connect now" : "Skip / Connect"}</p>
       </div>
@@ -219,33 +219,33 @@ export default function MyMatchesPage() {
         activeMatchesTab="my-matches"
       />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-3 py-3">
+      <main className="flex w-full items-start px-3 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
         <aside className="w-[160px] border border-[#d9dde2] bg-[#f7f8fa]">
           <div className="border-b border-[#e5e8ec] bg-[#eef1f4] px-2 py-2 text-[13px] font-bold text-[#59606a]">Refine Search</div>
           <div className="space-y-3 p-2 text-[11px] text-[#7b8088]">
             <div>
               <p className="font-bold text-[#626871]">Verified Status</p>
-              <p className="mt-1">☑ Open to all</p>
-              <p>☐ Premium only</p>
+              <p className="mt-1"> Open to all</p>
+              <p> Premium only</p>
             </div>
             <div>
               <p className="font-bold text-[#626871]">Photo settings</p>
-              <p className="mt-1">☑ Open to all</p>
+              <p className="mt-1"> Open to all</p>
             </div>
             <div>
               <p className="font-bold text-[#626871]">Recently Joined</p>
-              <p className="mt-1">☑ Up to 30 days</p>
-              <p>☐ Last 7 days</p>
+              <p className="mt-1"> Up to 30 days</p>
+              <p> Last 7 days</p>
             </div>
             <div>
               <p className="font-bold text-[#626871]">Marital Status</p>
-              <p className="mt-1">☑ Never Married</p>
+              <p className="mt-1"> Never Married</p>
             </div>
             <div>
               <p className="font-bold text-[#626871]">Community</p>
-              <p className="mt-1">☑ Open to all</p>
-              <p>☐ Vanniyar</p>
-              <p>☐ Gounder</p>
+              <p className="mt-1"> Open to all</p>
+              <p> Vanniyar</p>
+              <p> Gounder</p>
             </div>
           </div>
           <div className="border-t border-[#e5e8ec] p-2">
@@ -299,12 +299,12 @@ export default function MyMatchesPage() {
             ))}
 
             <div className="mb-2 mt-3 flex items-center justify-center gap-2 text-[11px] text-[#8b9097]">
-              <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">← Prev</span>
+              <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5"> Prev</span>
               <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">1</span>
               <span className="rounded border border-[#2cc0a5] bg-[#2cc0a5] px-2 py-0.5 text-white">2</span>
               <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">3</span>
               <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">4</span>
-              <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">Next →</span>
+              <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">Next </span>
             </div>
           </div>
         </section>
@@ -312,9 +312,9 @@ export default function MyMatchesPage() {
         <aside className="ml-2 w-[170px] border border-[#d9dbdf] bg-[#f4f5f7]">
           <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Online</div>
           <div className="h-[640px] px-2 py-1 text-[11px] text-[#7d8188]">
-            <p>• Accepted Members (8)</p>
-            <p>• Shortlists & More (6)</p>
-            <p>• My Matches (20)</p>
+            <p> Accepted Members (8)</p>
+            <p> Shortlists & More (6)</p>
+            <p> My Matches (20)</p>
             <div className="mt-2 space-y-1">
               {[
                 "Madhumitha R",
@@ -328,7 +328,7 @@ export default function MyMatchesPage() {
                 "Keerthana N",
                 "Divya R",
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -342,8 +342,10 @@ export default function MyMatchesPage() {
 
       <footer className="mt-4 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

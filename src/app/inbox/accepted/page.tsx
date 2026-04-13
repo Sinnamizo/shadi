@@ -78,8 +78,8 @@ export default function InboxAcceptedPage() {
         activeInboxTab="accepted"
       />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
-        <aside className="ml-[30px] w-[120px] border border-[#d9dde2] bg-white">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
+        <aside className="w-[120px] shrink-0 border border-[#d9dde2] bg-white">
           <div className="border-b border-[#e7eaef] bg-[#f6f8fa] px-2 py-1.5 text-[12px] font-bold text-[#61666f]">Filters</div>
           <div className="space-y-1 px-2 py-2 text-[11px] text-[#7a8088]">
             <label className="flex items-center gap-1"><input type="radio" name="acc-filter" /> Accepted by Me</label>
@@ -97,7 +97,7 @@ export default function InboxAcceptedPage() {
           <section className="border border-[#d8dce2] bg-white text-center">
             <div className="h-8 bg-[linear-gradient(180deg,#6fcd94,#52b97d)]" />
             <div className="px-3 py-8">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#4c4f56] text-[24px] text-white">🔒</div>
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#4c4f56] text-[24px] text-white"></div>
               <p className="mt-5 text-[28px] font-bold text-[#575d67]">You have 1 more Accept</p>
               <p className="mt-2 text-[13px] text-[#8d929a]">To view all and Contact them directly</p>
               <button className="mt-4 rounded-full bg-[#12b6cc] px-8 py-2 text-[22px] font-bold text-white">Upgrade Now</button>
@@ -108,9 +108,9 @@ export default function InboxAcceptedPage() {
         <aside className="ml-2 w-[220px] border border-[#d9dbdf] bg-[#f4f5f7]">
           <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Online</div>
           <div className="h-[420px] px-2 py-1 text-[11px] text-[#7d8188]">
-            <p>• Accepted Members (0)</p>
-            <p>• Shortlists & More (6)</p>
-            <p>• My Matches (20)</p>
+            <p> Accepted Members (0)</p>
+            <p> Shortlists & More (6)</p>
+            <p> My Matches (20)</p>
             <div className="mt-2 space-y-1">
               {[
                 "Madhumitha R",
@@ -124,7 +124,7 @@ export default function InboxAcceptedPage() {
                 "Soumya R",
                 "Divya R",
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -138,8 +138,10 @@ export default function InboxAcceptedPage() {
 
       <footer className="mt-4 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

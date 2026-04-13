@@ -1,4 +1,5 @@
 import ShaadiHeader from "@/components/ShaadiHeader";
+import Link from "next/link";
 
 const baseRows = [
   { label: "Marital Status", value: "Never Married" },
@@ -13,7 +14,7 @@ function FieldRow({ label, value }: { label: string; value: string }) {
       <p>{label}</p>
       <div className="flex h-8 items-center justify-between border border-[#cfd5dc] px-2 text-[12px] text-[#6f757d]">
         <span>{value}</span>
-        <span className="text-[#9aa0a8]">▾</span>
+        <span className="text-[#9aa0a8]"></span>
       </div>
     </div>
   );
@@ -28,8 +29,21 @@ export default function AdvancedSearchPage() {
         activeSearchTab="advanced-search"
       />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
-        <section className="ml-[100px] w-[620px]">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
+        <section className="flex-1 min-w-0">
+          <div className="mb-3 border border-[#d8dce2] bg-white p-3">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#11aaca]">New</p>
+                <p className="text-[15px] font-bold text-[#575d67]">Matrimony Platform Flow</p>
+                <p className="text-[12px] text-[#7a8088]">See the full 10-module flow connected to your current pages.</p>
+              </div>
+              <Link href="/platform-flow" className="rounded-[2px] bg-[#13b6cc] px-3 py-2 text-[12px] font-bold text-white">
+                Open Flow
+              </Link>
+            </div>
+          </div>
+
           <div className="mb-3 border border-[#d8dce2] bg-white">
             <div className="border-b border-[#e7eaef] bg-[#f6f8fa] px-3 py-2 text-[14px] font-bold text-[#5f656f]">Profile ID Search</div>
             <div className="flex items-center gap-3 px-3 py-3">
@@ -86,7 +100,7 @@ export default function AdvancedSearchPage() {
             <div className="mb-3 border border-[#d8dce2]">
               <div className="flex items-center justify-between bg-[#f6f8fa] px-3 py-2 text-[13px] font-bold text-[#5f656f]">
                 <span>Location & Grew up in Details</span>
-                <span>⌃</span>
+                <span></span>
               </div>
               <div className="p-3">
                 <FieldRow label="Country Living In" value="India" />
@@ -96,9 +110,9 @@ export default function AdvancedSearchPage() {
               </div>
             </div>
 
-            <div className="mb-2 flex items-center justify-between border border-[#d8dce2] bg-[#f6f8fa] px-3 py-2 text-[13px] font-bold text-[#5f656f]"><span>Education & Profession Details</span><span>⌄</span></div>
-            <div className="mb-2 flex items-center justify-between border border-[#d8dce2] bg-[#f6f8fa] px-3 py-2 text-[13px] font-bold text-[#5f656f]"><span>Lifestyle & Appearance</span><span>⌄</span></div>
-            <div className="mb-3 flex items-center justify-between border border-[#d8dce2] bg-[#f6f8fa] px-3 py-2 text-[13px] font-bold text-[#5f656f]"><span>Search Using Key Words</span><span>⌄</span></div>
+            <div className="mb-2 flex items-center justify-between border border-[#d8dce2] bg-[#f6f8fa] px-3 py-2 text-[13px] font-bold text-[#5f656f]"><span>Education & Profession Details</span><span></span></div>
+            <div className="mb-2 flex items-center justify-between border border-[#d8dce2] bg-[#f6f8fa] px-3 py-2 text-[13px] font-bold text-[#5f656f]"><span>Lifestyle & Appearance</span><span></span></div>
+            <div className="mb-3 flex items-center justify-between border border-[#d8dce2] bg-[#f6f8fa] px-3 py-2 text-[13px] font-bold text-[#5f656f]"><span>Search Using Key Words</span><span></span></div>
 
             <div className="mb-3 grid grid-cols-[110px_1fr] items-center gap-3 text-[12px] text-[#7a8088]">
               <p>Chat Status</p>
@@ -132,7 +146,7 @@ export default function AdvancedSearchPage() {
             </div>
 
             <div className="mt-5 pl-[113px]">
-              <button className="rounded-[2px] bg-[#12b6cc] px-6 py-2 text-[22px] font-bold text-white">Search ›</button>
+              <button className="rounded-[2px] bg-[#12b6cc] px-6 py-2 text-[22px] font-bold text-white">Search </button>
               <button className="ml-3 text-[12px] text-[#8a8f97]">Reset</button>
             </div>
           </div>
@@ -141,14 +155,14 @@ export default function AdvancedSearchPage() {
         <aside className="ml-2 w-[220px] border border-[#d9dbdf] bg-[#f4f5f7]">
           <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Online</div>
           <div className="h-[480px] px-2 py-1 text-[11px] text-[#7d8188]">
-            <p>• Accepted Members (0)</p>
-            <p>• Shortlists & More (6)</p>
-            <p>• My Matches (20)</p>
+            <p> Accepted Members (0)</p>
+            <p> Shortlists & More (6)</p>
+            <p> My Matches (20)</p>
             <div className="mt-2 space-y-1">
               {[
                 "Madhumitha R","Gayathri S","Vennila V","Kokila H","Anitha M","Harini D","Lakshmipriya S","Pavithra N","Hari Sri G","Kowsalya K"
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -162,8 +176,10 @@ export default function AdvancedSearchPage() {
 
       <footer className="mt-4 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

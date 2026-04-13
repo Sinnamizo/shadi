@@ -23,7 +23,7 @@ export default function MyPhotosPage() {
     <div className="min-h-screen bg-[#e9ebee]">
       <ShaadiHeader activeTab="my-photos" />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
         <div className="w-[120px] border border-[#d9dce1] bg-[#f7f8fa]">
           <div className="border-b border-[#e5e8ec] bg-[#eef0f3] px-2 py-1.5 text-[14px] font-bold text-[#4f545d]">Quick Links</div>
           <div className="space-y-1 px-2 py-2 text-[12px] text-[#7a7f88]">
@@ -97,9 +97,9 @@ export default function MyPhotosPage() {
         <aside className="ml-2 w-[220px] border border-[#d9dbdf] bg-[#f4f5f7]">
           <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Online</div>
           <div className="h-[480px] px-2 py-1 text-[12px] text-[#7d8188]">
-            <p>• Accepted Members (0)</p>
-            <p>• Shortlists & More (6)</p>
-            <p>• My Matches (20)</p>
+            <p> Accepted Members (0)</p>
+            <p> Shortlists & More (6)</p>
+            <p> My Matches (20)</p>
             <div className="mt-2 space-y-1">
               {[
                 "Madhumitha R",
@@ -113,7 +113,7 @@ export default function MyPhotosPage() {
                 "Pavithra R",
                 "Divya R",
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -127,8 +127,10 @@ export default function MyPhotosPage() {
 
       <footer className="mt-3 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Contact Us | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

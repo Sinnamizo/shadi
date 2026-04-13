@@ -53,7 +53,7 @@ function MatchColumn({ title, total, items }: { title: string; total: number; it
                 idx % 2 === 0 ? "border-[#6dd8ad] text-[#38b47e]" : "border-[#ff7f8e] text-[#e45b6b]"
               }`}
             >
-              {idx % 2 === 0 ? "✓" : "○"}
+              {idx % 2 === 0 ? "" : ""}
             </div>
           </div>
         ))}
@@ -68,7 +68,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#ededef]">
       <ShaadiHeader activeTab="dashboard" />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
         <div className="w-[760px]">
           <div className="grid grid-cols-[118px_280px_160px_190px] gap-2">
             <section className="rounded-[2px] border border-[#dbdde0] bg-white">
@@ -184,9 +184,9 @@ export default function Home() {
         <div className="ml-2 w-[220px] border border-[#d9dbdf] bg-[#f4f5f7]">
           <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Offline</div>
           <div className="h-[460px] px-2 py-1 text-[12px] text-[#7d8188]">
-            <p>• Accepted Members (0)</p>
-            <p>• Shortlists & More (0)</p>
-            <p>• My Matches (0)</p>
+            <p> Accepted Members (0)</p>
+            <p> Shortlists & More (0)</p>
+            <p> My Matches (0)</p>
           </div>
           <div className="flex h-6 items-center justify-end gap-4 border-t border-[#dfe2e6] bg-white px-2 text-[11px] text-[#848992]">
             <span>Alerts (4)</span>
@@ -198,8 +198,10 @@ export default function Home() {
 
       <footer className="mt-8 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Contact Us | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

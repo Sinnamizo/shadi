@@ -12,14 +12,14 @@ const quickLinks = [
 const orders = [
   {
     orderId: "#176795394456",
-    amount: "₹ 13110.00",
+    amount: " 13110.00",
     paymentMode: "UPI",
     status: "Activated",
     date: "09-Jan-2026",
   },
   {
     orderId: "#176795039510",
-    amount: "₹ 13110.00",
+    amount: " 13110.00",
     paymentMode: "-",
     status: "Order Cancelled",
     date: "09-Jan-2026",
@@ -31,7 +31,7 @@ export default function MyOrdersPage() {
     <div className="min-h-screen bg-[#ececef]">
       <ShaadiHeader activeTab="more" />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
         <div className="w-[105px] border border-[#d9dce1] bg-[#f7f8fa]">
           <div className="border-b border-[#e5e8ec] bg-[#eef0f3] px-2 py-1.5 text-[14px] font-bold text-[#4f545d]">Quick Links</div>
           <div className="space-y-1 px-2 py-2 text-[12px] leading-5 text-[#7a7f88]">
@@ -81,20 +81,20 @@ export default function MyOrdersPage() {
                 <span>{order.paymentMode}</span>
                 <span className={order.status === "Activated" ? "font-semibold text-[#63a740]" : "font-semibold text-[#e45c66]"}>{order.status}</span>
                 <span>{order.date}</span>
-                <span className="text-[#9aa0a8]">▣</span>
+                <span className="text-[#9aa0a8]"></span>
               </div>
             ))}
           </div>
 
           <div className="mt-4 text-[12px] leading-5 text-[#6f757d]">
             <p>
-              <span className="font-bold text-[#63a740]">✔ Activated</span> - We have received payment for your order, and the order has been executed.
+              <span className="font-bold text-[#63a740]"> Activated</span> - We have received payment for your order, and the order has been executed.
             </p>
             <p>
-              <span className="font-bold text-[#63a740]">✔ Payment Pending</span> - We have received your order, but are still awaiting the payment.
+              <span className="font-bold text-[#63a740]"> Payment Pending</span> - We have received your order, but are still awaiting the payment.
             </p>
             <p>
-              <span className="font-bold text-[#e45c66]">✖ Order Cancelled</span> - We have cancelled your order either because you requested us to do so, or because we did not receive payment or because it was a duplicate order.
+              <span className="font-bold text-[#e45c66]"> Order Cancelled</span> - We have cancelled your order either because you requested us to do so, or because we did not receive payment or because it was a duplicate order.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function MyOrdersPage() {
                 "Pavithra N",
                 "Durgadevi M",
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -131,8 +131,9 @@ export default function MyOrdersPage() {
 
       <footer className="mt-8 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+

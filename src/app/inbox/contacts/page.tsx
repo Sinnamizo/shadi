@@ -75,12 +75,12 @@ function RightRail() {
     <aside className="ml-2 w-[220px] border border-[#d9dbdf] bg-[#f4f5f7]">
       <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Online</div>
       <div className="h-[520px] px-2 py-1 text-[11px] text-[#7d8188]">
-        <p>• Accepted Members (0)</p>
-        <p>• Shortlists & More (6)</p>
-        <p>• My Matches (20)</p>
+        <p> Accepted Members (0)</p>
+        <p> Shortlists & More (6)</p>
+        <p> My Matches (20)</p>
         <div className="mt-2 space-y-1">
           {["Anitha M", "Madhumitha R", "Gayathri S", "Vennila V", "Kokila H", "Tharini T", "Harshita R", "Gayathri Devi R", "Harini D", "Lakshyadheerthana S", "Pavithra N", "Hari Sri G", "Kowsalya K", "Soumya R", "Saranya G"].map((name, index) => (
-            <p key={`${name}-${index}`}>• {name}</p>
+            <p key={`${name}-${index}`}> {name}</p>
           ))}
         </div>
       </div>
@@ -98,8 +98,8 @@ export default function InboxContactsPage() {
     <div className="min-h-screen bg-[#ececef]">
       <ShaadiHeader activePrimaryTab="inbox" secondaryVariant="inbox" activeInboxTab="contacts" />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
-        <section className="ml-[20px] w-[730px] border border-[#d8dce2] bg-white">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
+        <section className="flex-1 min-w-0 border border-[#d8dce2] bg-white">
           <div className="flex items-center justify-between border-b border-[#e7eaef] bg-[#f6f8fa] px-3 py-2">
             <h2 className="text-[18px] font-bold text-[#5b616a]">History of calls initiated & SMSs sent</h2>
             <p className="text-[12px] text-[#8b9097]">
@@ -128,8 +128,10 @@ export default function InboxContactsPage() {
 
       <footer className="mt-4 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

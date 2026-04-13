@@ -110,8 +110,8 @@ export default function MoreMatchesPage() {
         activeMatchesTab="more-matches"
       />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-4 py-3">
-        <section className="ml-[70px] w-[760px]">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
+        <section className="flex-1 min-w-0">
           {sectionData.map((section) => (
             <div key={section.title} className="mb-3 border border-[#d8dce2] bg-white p-2">
               <h2 className="text-[17px] font-bold text-[#5b616a]">
@@ -133,9 +133,9 @@ export default function MoreMatchesPage() {
         <aside className="ml-2 w-[170px] border border-[#d9dbdf] bg-[#f4f5f7]">
           <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Online</div>
           <div className="h-[640px] px-2 py-1 text-[11px] text-[#7d8188]">
-            <p>• Accepted Members (8)</p>
-            <p>• Shortlists & More (6)</p>
-            <p>• My Matches (20)</p>
+            <p> Accepted Members (8)</p>
+            <p> Shortlists & More (6)</p>
+            <p> My Matches (20)</p>
             <div className="mt-2 space-y-1">
               {[
                 "Madhumitha R",
@@ -149,7 +149,7 @@ export default function MoreMatchesPage() {
                 "Lakshmipriya S",
                 "Pavithra N",
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -163,8 +163,10 @@ export default function MoreMatchesPage() {
 
       <footer className="mt-4 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

@@ -22,10 +22,10 @@ const detailSections = [
   },
   { title: "Hobbies & Interests", content: "Reading, Working out" },
   { title: "Lifestyle", content: "Non Vegetarian" },
-  { title: "Background", content: "Hindu, Tamil • Vanniyar • Lives in Tirupthur, Tamil Nadu, India" },
+  { title: "Background", content: "Hindu, Tamil  Vanniyar  Lives in Tirupthur, Tamil Nadu, India" },
   { title: "Horoscope Details", content: "For correction in terms of moments, quickly create your Astro details and enrich her info." },
-  { title: "Family Details", content: "Both parents are employed • 1 Brother, 1 Sister • Family income 30-70 lakhs" },
-  { title: "Education & Career", content: "MBA • Management • Marketing Professional" },
+  { title: "Family Details", content: "Both parents are employed  1 Brother, 1 Sister  Family income 30-70 lakhs" },
+  { title: "Education & Career", content: "MBA  Management  Marketing Professional" },
 ];
 
 export default function TodayMatchesPage() {
@@ -37,8 +37,8 @@ export default function TodayMatchesPage() {
         activeMatchesTab="today-matches"
       />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
-        <div className="ml-[70px] w-[760px]">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
+        <div className="flex-1 min-w-0">
           <p className="mb-3 text-center text-[20px] font-semibold text-[#575c66]">
             Here are Today&apos;s top Matches for you. Connect with them now!
           </p>
@@ -71,7 +71,7 @@ export default function TodayMatchesPage() {
                 <div className="border-l border-[#eceff3] p-3 text-center">
                   <p className="text-[12px] text-[#8c9199]">Like this profile?</p>
                   <div className="mx-auto mt-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#e26577] text-[18px] text-[#e26577]">
-                    ♡
+                    
                   </div>
                   <p className="mt-1 text-[11px] text-[#8c9199]">Connect now</p>
                 </div>
@@ -99,15 +99,15 @@ export default function TodayMatchesPage() {
                   <p className="text-[13px] font-semibold text-[#6f757d]">You match 8/10 of Her Preferences</p>
                   <div className="mt-3 grid grid-cols-[1fr_24px] gap-y-2 text-[12px] text-[#6f757d]">
                     <p>Age 27 to 32</p>
-                    <p className="text-[#66b14a]">✓</p>
+                    <p className="text-[#66b14a]"></p>
                     <p>Height 5&apos;9 to 6&apos;4</p>
-                    <p className="text-[#66b14a]">✓</p>
+                    <p className="text-[#66b14a]"></p>
                     <p>Marital Status Never Married</p>
-                    <p className="text-[#66b14a]">✓</p>
+                    <p className="text-[#66b14a]"></p>
                     <p>Religion / Community Hindu</p>
-                    <p className="text-[#66b14a]">✓</p>
+                    <p className="text-[#66b14a]"></p>
                     <p>Diet Non-Veg</p>
-                    <p className="text-[#66b14a]">✓</p>
+                    <p className="text-[#66b14a]"></p>
                   </div>
                 </div>
               </article>
@@ -118,9 +118,9 @@ export default function TodayMatchesPage() {
         <aside className="ml-2 w-[220px] border border-[#d9dbdf] bg-[#f4f5f7]">
           <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[12px] text-[#8f9399]">I am Online</div>
           <div className="h-[640px] px-2 py-1 text-[12px] leading-5 text-[#7d8188]">
-            <p>• Accepted Members (8)</p>
-            <p>• Shortlists & More (6)</p>
-            <p>• My Matches (20)</p>
+            <p> Accepted Members (8)</p>
+            <p> Shortlists & More (6)</p>
+            <p> My Matches (20)</p>
             <div className="mt-2 space-y-1">
               {[
                 "Madhumitha R",
@@ -134,7 +134,7 @@ export default function TodayMatchesPage() {
                 "Keerthana N",
                 "Divya R",
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -148,8 +148,10 @@ export default function TodayMatchesPage() {
 
       <footer className="mt-8 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

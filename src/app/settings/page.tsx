@@ -16,8 +16,8 @@ export default function SettingsPage() {
     <div className="min-h-screen bg-[#ececef]">
       <ShaadiHeader activeTab="settings" />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-2">
-        <section className="ml-[78px] w-[445px]">
+      <main className="flex w-full items-start px-4 py-2 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
+        <section className="flex-1 min-w-0">
           <header className="mb-3">
             <h1 className="text-[34px] font-bold leading-8 text-[#575d68]">Settings</h1>
           </header>
@@ -25,7 +25,7 @@ export default function SettingsPage() {
           <div className="border border-[#dadde2] bg-white shadow-[0_1px_2px_rgba(20,20,20,0.06)]">
             <div className="flex items-center justify-between border-b border-[#eceff3] px-3 py-3">
               <h2 className="text-[15px] font-bold text-[#535862]">Account Settings</h2>
-              <span className="text-[14px] text-[#9aa0a8]">⌃</span>
+              <span className="text-[14px] text-[#9aa0a8]"></span>
             </div>
             <div className="flex items-center justify-between px-7 py-4">
               <div className="flex items-center gap-4 text-[14px]">
@@ -48,7 +48,7 @@ export default function SettingsPage() {
                     <span className="rounded-full bg-[#39a9ff] px-1.5 py-[1px] text-[11px] font-bold text-white">NEW</span>
                   ) : null}
                 </div>
-                <span className="text-[14px] text-[#9aa0a8]">⌄</span>
+                <span className="text-[14px] text-[#9aa0a8]"></span>
               </div>
             ))}
           </div>
@@ -76,7 +76,7 @@ export default function SettingsPage() {
                 "Vasanthi A",
                 "Linthupiriya R",
               ].map((name, index) => (
-                <p key={`${name}-${index}`}>• {name}</p>
+                <p key={`${name}-${index}`}> {name}</p>
               ))}
             </div>
           </div>
@@ -90,8 +90,10 @@ export default function SettingsPage() {
 
       <footer className="mt-6 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

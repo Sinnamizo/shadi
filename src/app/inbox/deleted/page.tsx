@@ -141,9 +141,9 @@ function RightRail() {
     <aside className="ml-2 w-[220px] border border-[#d9dbdf] bg-[#f4f5f7]">
       <div className="h-4 border-b border-[#e6e8eb] bg-white text-right text-[11px] text-[#8f9399]">I am Online</div>
       <div className="h-[520px] px-2 py-1 text-[11px] text-[#7d8188]">
-        <p>• Accepted Members (0)</p>
-        <p>• Shortlists & More (6)</p>
-        <p>• My Matches (20)</p>
+        <p> Accepted Members (0)</p>
+        <p> Shortlists & More (6)</p>
+        <p> My Matches (20)</p>
         <div className="mt-2 space-y-1">
           {[
             "Madhumitha R",
@@ -160,7 +160,7 @@ function RightRail() {
             "Soumya R",
             "Saranya G",
           ].map((name, index) => (
-            <p key={`${name}-${index}`}>• {name}</p>
+            <p key={`${name}-${index}`}> {name}</p>
           ))}
         </div>
       </div>
@@ -210,8 +210,8 @@ export default function InboxDeletedPage() {
     <div className="min-h-screen bg-[#ececef]">
       <ShaadiHeader activePrimaryTab="inbox" secondaryVariant="inbox" activeInboxTab="deleted" />
 
-      <main className="mx-auto flex w-full max-w-[1365px] items-start px-5 py-3">
-        <aside className="ml-[30px] w-[120px] border border-[#d9dde2] bg-white">
+      <main className="flex w-full items-start px-4 py-3 [&>section:first-child]:min-w-0 [&>section:first-child]:flex-1 [&>div:first-child]:min-w-0 [&>div:first-child]:flex-1">
+        <aside className="w-[120px] shrink-0 border border-[#d9dde2] bg-white">
           <div className="border-b border-[#e7eaef] bg-[#f6f8fa] px-2 py-1.5 text-[12px] font-bold text-[#61666f]">Filters</div>
           <div className="space-y-1 px-2 py-2 text-[11px] text-[#7a8088]">
             <label className="flex items-center gap-1"><input type="checkbox" defaultChecked /> All Requests</label>
@@ -226,9 +226,9 @@ export default function InboxDeletedPage() {
             <DeletedProfileCard key={`${card.name}-${card.date}`} card={card} />
           ))}
           <div className="mb-3 flex items-center justify-center gap-3 text-[11px] text-[#8e949c]">
-            <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">← Prev</span>
+            <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5"> Prev</span>
             <span>Showing 1-10 of 106</span>
-            <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">Next →</span>
+            <span className="rounded border border-[#d9dde2] bg-white px-2 py-0.5">Next </span>
           </div>
         </section>
 
@@ -237,8 +237,10 @@ export default function InboxDeletedPage() {
 
       <footer className="mt-4 border-t border-[#d7d9dd] bg-[#f3f4f6] py-2 text-center text-[12px] leading-5 text-[#8b8f96]">
         <p>About us | VIP Shaadi | Shaadi Blog | Success Stories | Shaadi Centres | Contact Us | Shaadi Live | Work with us</p>
-        <p className="mt-1">© 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
+        <p className="mt-1"> 1996-2026 Shaadi.com - The World&apos;s No.1 Matchmaking Service</p>
       </footer>
     </div>
   );
 }
+
+

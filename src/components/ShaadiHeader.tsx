@@ -26,6 +26,7 @@ const secondaryTabs = [
 ];
 
 const moreMenuItems = [
+  { label: "Platform Flow", href: "/platform-flow" },
   { label: "My Contact Details", href: "#" },
   { label: "Add Horoscope Details", href: "#" },
   { label: "Notifications", href: "#" },
@@ -65,7 +66,7 @@ export default function ShaadiHeader({
   return (
     <>
       <header className="h-12 border-b border-[#d83d48] bg-[#e83b47] text-white">
-        <div className="mx-auto flex h-full w-full max-w-[1365px] items-center justify-between px-5">
+        <div className="flex h-full w-full items-center justify-between px-5">
           <div className="flex items-center gap-8">
             <div className="font-brand text-[40px] leading-none">shaadi</div>
             <nav className="hidden gap-6 text-[14px] font-bold md:flex">
@@ -93,7 +94,7 @@ export default function ShaadiHeader({
 
       <div className="h-8 border-b border-[#d9dce0] bg-[#f8f8f9]">
         {secondaryVariant === "default" ? (
-          <div className="mx-auto flex h-full w-full max-w-[1365px] items-center gap-5 px-5 text-[12px] text-[#6f7279]">
+          <div className="flex h-full w-full items-center gap-5 px-5 text-[12px] text-[#6f7279]">
             {secondaryTabs.map((tab) => {
               const isActive = tab.key === activeTab;
               const baseClassName = isActive
@@ -144,7 +145,7 @@ export default function ShaadiHeader({
             })}
           </div>
         ) : secondaryVariant === "matches" ? (
-          <div className="mx-auto flex h-full w-full max-w-[1365px] items-center gap-5 px-5 text-[11px] text-[#737781]">
+          <div className="flex h-full w-full items-center gap-5 px-5 text-[11px] text-[#737781]">
             {matchesTabs.map((tab) => {
               const isActive = tab.key === activeMatchesTab;
               const itemContent = (
@@ -174,7 +175,7 @@ export default function ShaadiHeader({
             })}
           </div>
         ) : secondaryVariant === "search" ? (
-          <div className="mx-auto flex h-full w-full max-w-[1365px] items-center gap-5 px-5 text-[12px] text-[#737781]">
+          <div className="flex h-full w-full items-center gap-5 px-5 text-[12px] text-[#737781]">
             {searchTabs.map((tab) => {
               const isActive = tab.key === activeSearchTab;
               return tab.href.startsWith("/") ? (
@@ -196,7 +197,7 @@ export default function ShaadiHeader({
             })}
           </div>
         ) : (
-          <div className="mx-auto flex h-full w-full max-w-[1365px] items-center gap-5 px-5 text-[12px] text-[#737781]">
+          <div className="flex h-full w-full items-center gap-5 px-5 text-[12px] text-[#737781]">
             {inboxTabs.map((tab) => {
               const isActive = tab.key === activeInboxTab;
               const className = `pb-1 ${isActive ? "border-b border-[#ef3646] font-bold text-[#ef3646]" : "font-semibold text-[#6f7480]"}`;
@@ -216,3 +217,4 @@ export default function ShaadiHeader({
     </>
   );
 }
+
